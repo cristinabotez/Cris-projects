@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dispaly</title>
+    <style>
+
+        .box{
+
+            width: 250px;
+            height: 250px;
+            border: 1px solid #2929d3;
+            background-color: #add8e6;
+            text-align: center;
+
+        }
+
+        .inline{
+            display: inline;
+        }
+
+        .block{display: block;
+        }
+
+        .none {
+            display: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            width: 150px;
+        }
+        div {
+            background-color: #add8e6;
+        }
+
+        span {
+            background-color: #a020ae;
+        }
+
+        header nav ul li {
+            display: inline-block;
+            height: 50px;
+            width: 100px;
+            background-color: #add8e6;
+        }
+
+        header nav ul li:nth-of-type(2n+1) {
+            background-color: #13b44c;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#">Nav Item</a></li>
+            <li><a href="#">Nav Item</a></li>
+            <li><a href="#">Nav Item</a></li>
+            <li><a href="#">Nav Item</a></li>
+            <li><a href="#">Nav Item</a></li>
+            <li><a href="#">Nav Item</a></li>
+        </ul>
+    </nav>
+</header>
+<section>
+    <div>Normal div</div>
+    <div class="inline">Div with display <strong>inline</strong></div>
+    <span>Normal span</span>
+    <span class="block">Span with display <strong>block</strong></span>
+
+    <div class="box none">
+        text in a box
+    </div>
+</section>
+
+</body>
+</html>
