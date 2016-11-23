@@ -1,0 +1,15 @@
+#header {
+  color: #333333;
+  border-left: 1px;
+  border-right: 3px;
+  border-style: solid;
+  width: 100px;
+  height: 30px;
+}
+#footer {
+  color: #114411;
+  border-color: #842210;
+  border-style: solid;
+  width: 100px;
+  height: 30px;
+}

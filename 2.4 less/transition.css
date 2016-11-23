@@ -1,0 +1,16 @@
+/*mixin */
+/* IMplementation */
+#somediv {
+  -webkit-transition: rotate(5deg) scale(0.5) skew(1deg) translate(0px);
+  -moz-transition: rotate(5deg) scale(0.5) skew(1deg) translate(0px);
+  -o-transition: rotate(5deg) scale(0.5) skew(1deg) translate(0px);
+  -ms-transition: rotate(5deg) scale(0.5) skew(1deg) translate(0px);
+  transform: rotate(5deg) scale(0.5) skew(1deg) translate(0px);
+}
+#otherdiv {
+  -webkit-transition: rotate(-5deg) scale(1) skew(1deg) translate(100px);
+  -moz-transition: rotate(-5deg) scale(1) skew(1deg) translate(100px);
+  -o-transition: rotate(-5deg) scale(1) skew(1deg) translate(100px);
+  -ms-transition: rotate(-5deg) scale(1) skew(1deg) translate(100px);
+  transform: rotate(-5deg) scale(1) skew(1deg) translate(100px);
+}

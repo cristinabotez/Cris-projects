@@ -1,0 +1,24 @@
+@the-border: 1px;
+@base-color: #111;
+@red: #842210;
+@border-style: solid;
+@border-width: 100px;
+@border-height: 30px;
+
+
+#header {
+    color: @base-color * 3;
+    border-left: @the-border;
+    border-right: @the-border * 3;
+    border-style: @border-style;
+    width: @border-width;
+    height: @border-height;
+}
+
+#footer {
+    color: @base-color + #003300;
+    border-color: desaturate(@red, 0%);
+    border-style: @border-style;
+    width: @border-width;
+    height: @border-height;
+}

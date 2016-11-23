@@ -1,0 +1,21 @@
+/*mixin */
+.transform (@rotate: 90deg, @scale: 1, @skew: 1deg, @translate: 10px) {
+    -webkit-transition: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+    -moz-transition: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+    -o-transition: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+    -ms-transition: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+    transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+}
+
+/* IMplementation */
+
+#somediv {
+    .transform(5deg, 0.5, 1deg, 0px);
+    }
+
+
+
+#otherdiv {
+    .transform(-5deg, 1, 1deg, 100px);
+}
+

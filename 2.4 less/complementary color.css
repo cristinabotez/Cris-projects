@@ -1,0 +1,22 @@
+/*mixin */
+/* IMplementation */
+.one {
+  background-color: #663333;
+}
+.two {
+  background-color: #336666;
+}
+.three {
+  background-color: #2b5555;
+}
+.four {
+  background-color: #994d4d;
+}
+.five {
+  background-color: #bb7777;
+}
+div {
+  width: 100px;
+  height: 188px;
+  display: inline-block;
+}

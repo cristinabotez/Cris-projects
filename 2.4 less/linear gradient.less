@@ -1,0 +1,23 @@
+/*mixin */
+.gradient (@origin: left, @start: #ffffff, @stop: #000000) {
+    background-color: @start;
+    background-image:
+    -webkit-linear-gradient(@origin, @start, @stop);
+    background-image: -moz-linear-gradient(@origin, @start, @stop);
+    background-image: -o-linear-gradient(@origin, @start, @stop);
+    background-image: -ms-linear-gradient(@origin, @start, @stop);
+    background-image: linear-gradient(@origin, @start, @stop);
+}
+
+/* IMplementation */
+
+#somediv {
+    .gradient(left, #663333, #333333);
+    border: 1px solid black;
+    width: 300px;
+    height: 200px;
+    }
+
+
+
+
