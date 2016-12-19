@@ -1,0 +1,45 @@
+header h1{
+  text-align: center;
+}
+nav li{
+  text-align: left;
+  border-style: double;
+  }
+
+header nav li{
+    text-decoration: none;
+  }
+
+  li{
+    display: inline;
+    list-style-type: none;
+    padding: 10px;
+  }
+
+  section {
+    float: right;
+    width: 1200px;
+    height: 500px;
+  }
+
+
+aside {
+  float: left;
+  width: 100px;
+  height: 500px;
+  text-decoration: none;
+  }
+
+  .clearfix:before  {
+       visibility: hidden;
+       display: block;
+       font-size: 0;
+       content: " ";
+       clear: both;
+       height: 0;
+       }
+
+footer {
+  text-align: center;
+  vertical-align: bottom;
+}

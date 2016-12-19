@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <title>2. Nested list</title>
+    <style>
+    .UpperRoman{
+      list-style:upper-roman;
+    }
+    .LowerLatin{
+      list-style: lower-latin;
+    padding-left: 15px}
+    .Decimal{
+      list-style: decimal;
+      padding-left: 15px
+    }
+    .Circle{
+      list-style: circle;
+    }
+    .Square{
+      list-style: square;
+    }
+    .Disc{
+      list-style: disc;
+      padding-left: 15px
+    }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h3>2 Nested lists - example:</h3>
+    </header>
+
+    <section>
+          <ol class="UpperRoman">
+          <li>List item 1
+              <ol class="LowerLatin">
+                    <li>Nested item 1.1</li>
+                    <li>Nested item 1.2</li>
+              </ol>
+          </li>
+
+      	  <li>List item 2
+              <ol class="Decimal">
+                    <li>Nested item 2.1</li>
+                    <li>Nested item 2.2</li>
+
+                      <ul class="Circle">
+                        <li>Nested item 2.2.1</li>
+                        <li>Nested item 2.2.2</li>
+
+
+                      <ul class="Square">
+                                <li>Nested item 2.2.2.1</li>
+                                <li>Nested item 2.2.2.2</li>
+                      </ul>
+
+                      <li>Nested item 2.2.3</li>
+                    </ul>
+                   <li>Nested item 2.3</li>
+
+             </ol>
+          </li>
+
+      <li>List item 3
+                 <ul class="Disc">
+                    <li>Nested item 3.1</li>
+                    <li>Nested item 3.1</li>
+                    <li>Nested item 3.1</li>
+                 </ul>
+      </li>
+
+   </ol>
+
+   </p>
+
+  </body>
+
+</html>
