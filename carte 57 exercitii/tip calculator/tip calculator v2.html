@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        fieldset {
+            width: 350px;
+            border-radius: 10px;
+        }
+        label {
+            display: inline-block;
+            width: 180px;
+        }
+        input:nth-last-child(6), input:nth-last-child(3){
+            background-color:DeepSkyBlue;
+        }
+    </style>
+    <script type="text/javascript" src="02.scriptForm.js"></script>
+</head>
+<body>
+
+<fieldset>
+    <form onchange="calculate()">
+        <label for="billAmount">What is the bill amount?($)</label>
+        <input type="text" name="billAmount" id="billAmount"/><br/>
+        <label for="tipRate">What is the tip rate? (%)</label>
+        <input type="text" name="tipRate" id="tipRate"/><br/>
+        <label for="tipRound">Tip: ($)</label>
+        <input type="text" name="tipRound" id="tipRound" readonly /><br/>
+        <label for="total">Total: ($)</label>
+        <input type="text" name="total" id="total" readonly /><br/>
+        <input type="reset" value="Delete">
+
+    </form>
+</fieldset>
+</body>
+</html>
