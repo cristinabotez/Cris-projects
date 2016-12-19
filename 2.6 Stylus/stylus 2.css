@@ -1,0 +1,16 @@
+#root {
+  display: block;
+  width: 960px;
+  margin: 0 auto;
+  border: 1px solid #000;
+}
+a {
+  color: #f00;
+}
+a:visited {
+  color: #646363;
+}
+.box-5 {
+  border-top: 1px solid #000;
+  width: 100px;
+}
