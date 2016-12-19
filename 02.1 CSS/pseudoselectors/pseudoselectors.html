@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo selectors</title>
+    <style>
+        header nav ul{
+            list-style-type: none;
+        }
+        header nav ul li a{
+            text-decoration: none;
+        }
+        header nav ul li a:hover{
+            text-decoration: underline;
+        }
+        section article header h1:before{
+            content: "<<";
+        }
+        section article header h1:after{
+            content: ">>";
+        }
+        section article p:first-letter{
+            font-size: 1.7em;
+            font-family: 'Old English Text MT';
+                    }
+        section article p:first-line{
+            color: blue;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">item</a>
+            </li>
+            <li>
+                <a href="#">item</a>
+            </li>
+            <li>
+                <a href="#">item</a>
+            </li>
+            <li>
+                <a href="#">item</a>
+            </li>
+            <li>
+                <a href="#">item</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<section>
+    <article>
+        <header>
+            <h1>
+                Neque porro quisquam est ...Neque porro quisquam est ...Neque porro quisquam est ...Neque porro quisquam est ......Neque porro quisquam est ......Neque porro quisquam est ...
+            </h1>
+        </header>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+</section>
+</body>
+</html>

@@ -1,0 +1,55 @@
+div {font-family:"Book Antiqua";
+	border: 10px solid white; 
+	width: 1000px; padding: 1px;
+}
+
+.firstrow{background-image:url(dreptunghi_verde.png); 
+color: white;}
+
+.firstrow, .secondrow, .thirdrow, .fourthrow, .fifthrow {
+border: 1px solid grey;
+width: 1000px;
+height: 25px;
+}
+
+
+.thirdrow, .fifthrow {
+background-color: #e6ffe6;
+}
+
+.firstrow span, .secondrow span, .thirdrow span, .fourthrow span, .fifthrow span {
+border: 1px solid grey;
+padding: .15em;}
+
+
+.germanyflag{background-image:url(flag_germany.png);
+		background-repeat: no-repeat;
+		text-align: right}
+
+.mexicoflag{background-image:url(flag_mexico.png);
+		background-repeat: no-repeat;
+		text-align: right}
+
+.ukflag{background-image:url(flag_UK.png);
+		background-repeat: no-repeat;
+		text-align: right}
+
+.col1 {
+float: left;
+width: 200px;}
+
+.col2 {
+float: right;
+width: 200px;}
+
+.col3 {
+float: right;
+width: 400px;}
+
+.col4 {
+float: right;
+width: 400px;}
+
+
+
+
