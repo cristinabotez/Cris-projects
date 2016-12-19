@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fonts</title>
+    <style>
+        @font-face {
+            font-family: SketchRockwell-Bold;
+            src:url(fonts/SketchRockwell-Bold.ttf)
+        }
+        h1 {
+            font-family: SketchRockwell-Bold;
+            font-size: 3.7em;
+            font-weight: normal;
+            text-shadow: 2px 5px 27px rgba(178, 0, 255, 0.78);
+        }
+        h2 {font: normal 2.5em Consolas;
+}
+        .box {
+            height: 100px;
+            width: 300px;
+            overflow: auto;
+            white-space: nowrap;
+            border: 1px solid black;
+
+        }
+        .overflow-ellipsis {
+            text-overflow: ellipsis;
+            overflow: auto;
+        }
+        .overflow-clip {
+            text-overflow: clip;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+<h1>ITacad Software Academy</h1>
+
+<h2>Normal text</h2>
+<p class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae deleniti deserunt maiores perspiciatis placeat repellendus reprehenderit tenetur. Adipisci, asperiores consequatur dolores ea laborum molestias numquam, obcaecati pariatur sed soluta totam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae deleniti deserunt maiores perspiciatis placeat repellendus reprehenderit tenetur. Adipisci, asperiores consequatur dolores ea laborum molestias numquam, obcaecati pariatur sed soluta totam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae deleniti deserunt maiores perspiciatis placeat repellendus reprehenderit tenetur. Adipisci, asperiores consequatur dolores ea laborum molestias numquam, obcaecati pariatur sed soluta totam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae deleniti deserunt maiores perspiciatis placeat repellendus reprehenderit tenetur. Adipisci, asperiores consequatur dolores ea laborum molestias numquam, obcaecati pariatur sed soluta totam?</p>
+
+<h2>text-overflow: ellipsis</h2>
+<p class="box overflow-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae deleniti deserunt maiores perspiciatis placeat repellendus reprehenderit tenetur. Adipisci, asperiores consequatur dolores ea laborum molestias numquam, obcaecati pariatur sed soluta totam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae deleniti deserunt maiores perspiciatis placeat repellendus reprehenderit tenetur. Adipisci, asperiores consequatur dolores ea laborum molestias numquam, obcaecati pariatur sed soluta totam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae deleniti deserunt maiores perspiciatis placeat repellendus reprehenderit tenetur. Adipisci, asperiores consequatur dolores ea laborum molestias numquam, obcaecati pariatur sed soluta totam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae deleniti deserunt maiores perspiciatis placeat repellendus reprehenderit tenetur. Adipisci, asperiores consequatur dolores ea laborum molestias numquam, obcaecati pariatur sed soluta totam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aut doloribus, eveniet harum iusto magnam minus nesciunt nulla optio recusandae repudiandae, voluptate. A aliquid doloribus et libero modi qui reprehenderit.</p>
+
+<h2>text-overflow: clip</h2>
+<p class="box overflow-clip">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium asperiores aspernatur atque blanditiis consectetur distinctio est exercitationem, fugit harum impedit nobis, placeat quae? Aut consectetur deserunt quod tempore tenetur? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium asperiores aspernatur atque blanditiis consectetur distinctio est exercitationem, fugit harum impedit nobis, placeat quae? Aut consectetur deserunt quod tempore tenetur? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium asperiores aspernatur atque blanditiis consectetur distinctio est exercitationem, fugit harum impedit nobis, placeat quae? Aut consectetur deserunt quod tempore tenetur? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium asperiores aspernatur atque blanditiis consectetur distinctio est exercitationem, fugit harum impedit nobis, placeat quae? Aut consectetur deserunt quod tempore tenetur?</p>
+
+
+</body>
+</html>
