@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,kBAAS;EACL,IAAI,EAAC,CAAC;EACN,8BAAO;IACH,OAAO,EAAC,KAAK;IACb,MAAM,EAAE,CAAC;IACT,OAAO,EAAE,EAAE;IACX,KAAK,EAAC,IAAI;;AAQV,UAAE;EACE,KAAK,EAAE,IAAI;EACX,WAAW,EAAE,IAAI;EACjB,gBAAgB,EAAE,OAAO;EACzB,eAAe,EAAE,IAAI;EAErB,0BAAiB;IAAC,gBAAgB,EAAE,OAAO",
+"sources": ["selector%20inheritance.scss"],
+"names": [],
+"file": "selector%20inheritance.css"
+}
