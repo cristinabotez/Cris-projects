@@ -12,8 +12,25 @@
 <script type="text/javascript">
 var el = document.getElementById("div_tag");
 alert (el.childNodes[0].value);
-//alert(el.childNodes[1].getElementsByTagNameNS('span').id);
+//alert(el.childNodes[0].getElementsByTagName('span').id);
 </script>
+<script type="text/javascript">
+    var el=document.getElementById('div_tag');
+    alert(el.childNodes[0].value);
+    alert(el.childNodes[1].getElementsByTagName('span')[0].innerHTML);
+</script>
+
+<!--obtain element children-->
+<script>
+    function go() {
+        var childNodes=document.body.childNodes;
+        for(var i=0; i<childNodes.length; i++){
+            document.write(childNodes[i]);
+        }
+    }
+</script>
+
+<button onclick="go()">Show Nodes</button>
 
 </body>
 </html>
