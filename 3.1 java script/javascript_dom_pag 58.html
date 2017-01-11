@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript variables</title>
+
+    <style>
+        /*forms*/
+        form {
+            width: 464px;
+            overflow: hidden;
+        }
+
+        label{
+            display: block;
+            font-size: 11px;
+            color: #645a56;
+            text-transform: uppercase;
+        }
+
+        input[type=text], input[type=email], input[type=url],
+        input[type=number], input[type=file], input[type=date], input[type=checkbox], select, textarea {
+            width: 452px;
+            height: 27px;
+            border: 1px solid #c3c5bf;
+            color: #645a56;
+            font-size: 17px;
+            padding: 7px 0 0 10px;
+            margin-bottom: 14px;
+            font-family: Helvetica, Arial;
+        }
+
+        input[type=text]:hover, input[type=date]:hover, input[type=email]:hover, input[type=url]:hover,
+        input[type=number]:hover, input[type=file]:hover, input[type=radio]:hover, textarea:hover, input:focus, textarea:focus {
+            background: #eeecec;
+            outline: none;
+        }
+
+        textarea {
+            height: 212px;
+        }
+
+        input[type=submit] {
+            background: #d5ceca; url(../images/submitButtonBG.jpg) no-repeat;
+            width: 102px;
+            height: 34px;
+            padding: 8px;
+            text-align: center;
+            font-size: 11px;
+            text-transform: uppercase;
+            float: right;
+            cursor: pointer;
+            border: none;
+            margin-top: 15px;
+            color: #30241f;
+            line-height: 20px;
+        }
+
+        input[type=submit]:hover {
+            background: #bcb4ae;
+        }
+
+
+        /*javascript validation style */
+
+        .hint {
+            font-weight: normal;
+            color: #2076c8;
+            margin-left: 10px
+        }
+
+        .error {
+            font-weight: normal;
+            color: #cf1925;
+            margin-left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<form id="myform" name="theform" action="data.php"
+      method="POST">
+    <span id="namehint" class="hint">
+    </span>
+
+    <label for="name">Name: </label>
+    <input type="text" name="name" required placeholder="Last, First" maxlength="20" value="" id="name" />
+
+    <label for="email">Email: </label>
+    <input type="email" name="email" multiple value="" id="email" />
+
+    <label for="age">Age: </label>
+    <input type="number" name="age" min="13" max="60" value="" id="age" />
+
+    <label for="country">Country: </label>
+    <input type="text" name="country" value="" id="country" list="countries" pattern="[A-Za-z]+" />
+    <datalist id="countries">
+        <option value="Romania"></option>
+        <option value="Bulgaria"></option>
+        <option value="Hungary"></option>
+        <option value="Austria"></option>
+    </datalist>
+
+    <label for="zipcode">Zip Code:</label>
+    <input type="text" name="zipcode" pattern="[0-9]{6}" value="" id="zipcode" />
+<br />
+<span id="formerror" class="error"></span>
+    <br />
+    <label for="phone">Phone:</label>
+    <input type="text" name="phone" pattern="\d{4}\-\d{6}" value="" id="phone" />
+
+<span id="formerror1" class="error"></span>
+    <label for="website">Website:</label>
+    <input type="url" name="website" value="" id="website" />
+
+    <label for="image">Your photo: </label>
+    <input type="file" name="image"
+           multiple accept="image/png, video/*" id="image" />
+
+    <label for="date">Date: </label>
+    <input type="date" name="date" min="2014-05-30" max="2015-05.29" value="" id="date" />
+
+    <label for="reference">Were did you hear about us? </label>
+    <select name="reference" id="reference">
+        <option value="">Choose...</option>
+        <option value="http://www.uaic.ro">A friend</option>
+        <option value="http://www.facebook.com">Facebook</option>
+        <option value="http://www.twitter.com">Twitter</option>
+
+    </select>
+
+    <label for="subscribe">Subscribe to our mailing list?</label>
+    <input type="checkbox" id="subscribe" name="subscribe" CHECKED value="yes" />
+
+    <label for="requesttype">Request type:</label>
+    <input type="radio" name="requesttype" value="question" id="questionitem" />Question
+    <input type="radio" name="requesttype" value="comment" id="commentionitem" />Comment
+
+    <label for="message">Message</label>
+
+</form>
+<script>
+    document.theform.name.onfocus=function(){
+        document.getElementById('namehint').innerHTML="(Enter last name, then first)";
+    }
+    document.theform.name.onblur=function () {
+    document.getElementById('namehint').innerHTML="";
+    }
+    //onfocus
+
+    document.theform.website.onblur=function() {
+        if (document.theform.website.value===""){
+            document.getElementById('formerror1').innerHTML="The URL field is required";
+        }//url empty
+        if (document.theform.website.value==="http://") {
+            document.getElementById('formerror1').innerHTML="Please add valid URL";
+        }//url empty
+    }
+    //onblur
+
+    document.theform.website.onchange=function() {
+        var theURL=document.theform.website.value;
+
+        if (theURL.indexOf("http://")){
+            document.getElementById('formerror1').innerHTML="URLs must begin with http://";
+        }//doesn't have http
+    }
+    //onchange
+</script>
+
+<script>
+    document.theform.reference.onchange=function () {var id=document.theform.reference.selectedIndex;
+    var url=document.theform.reference[id].value;
+    //window.location.href=url;
+
+    if (url !='' && window.confirm("Really go to another page?")) {
+
+        //document.location.href=url;
+        //primul de sus deschide pagina in locatia curenta; cel de jos deschide pagina intr-o fereastra noua;
+
+        window.open(url);
+        //open in a new window
+    }
+    else {
+        document.location;
+    }
+    }
+
+</script>
+
+<script src="myscript.js">
+
+</script>
+
+
+
+
+
+</body>
+</html>

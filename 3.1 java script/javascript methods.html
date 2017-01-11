@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript variables</title>
+</head>
+<body>
+
+<p onclick="this.innerHTML='GOOD JOB'">Click me.</p>
+
+<button onclick="myFunction()">Click Me</button>
+<p id="demo"></p>
+<span onmouseover="this.style.color='red'">Mouse over me!</span>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6">Display the result here.</p>
+
+
+
+<script type="text/javascript">
+    function myFunction() {
+        document.getElementById("demo").innerHTML = "Hello World";
+    }
+
+    var txt = "hello World";
+    document.getElementById("demo1").innerHTML = txt.indexOf('World');
+
+
+    var str = "Apple, Banana, Kiwi";
+    document.getElementById("demo2").innerHTML = str.slice(7, 19);
+
+    var txt = "Hello World";
+    document.getElementById("demo3").innerHTML = txt.replace("World", "Universe");
+
+    document.getElementById("demo4").innerHTML = txt.toUpperCase("Hello World");
+    document.getElementById("demo5").innerHTML = txt.toLowerCase("Hello World");
+
+    var str1 = "Hello";
+    var str2 = " World!";
+    var str = str1.concat(str2);
+    document.getElementById("demo6").innerHTML = str;
+
+</script>
+
+
+
+</body>
+</html>

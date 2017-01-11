@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pag 65</title>
+</head>
+<body>
+<p id="demo">Use the DOM to change my text!</p>
+<p>Use the DOM to change my elements</p>
+<p class="test">Use the DOM to change my class</p>
+<p >Use the DOM to change my text!</p>
+<p id="demo1">Use the DOM to change my text!</p>
+<p id="demo2">Use the DOM to change my text!</p>
+
+<script>
+    //add code here
+    document.getElementById("demo").innerHTML="Good Job!";
+    document.getElementsByTagName('p')[1].innerHTML="Good job!";
+    document.getElementsByClassName("test")[0].innerHTML="Good Job!";
+    document.querySelectorAll("p")[3].innerHTML="hello!";
+    document.getElementById("demo1").innerHTML=document.title;
+    document.head.childNodes[3].innerHTML=document.getElementsByTagName("demo2")[5].innerHTML;
+</script>
+
+</body>
+</html>

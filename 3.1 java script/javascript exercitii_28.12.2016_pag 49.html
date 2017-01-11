@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript variables</title>
+</head>
+<body>
+
+<input id="myInput" type="text" value="BMW">
+
+<p id="demo"></p>
+<script>
+    var text;
+    var favCar = document.getElementById("myInput").value;
+
+    switch(favCar){
+        case "BMW":
+            text = "German car";
+            break;
+        case "Ford":
+            text = "American car";
+            break;
+        case "Peugeot":
+            text = "French car";
+            break;
+        default:
+            text = "Unknown car name";
+
+    }
+    document.getElementById("demo").innerHTML = text;
+
+
+</script>
+
+
+
+</body>
+</html>

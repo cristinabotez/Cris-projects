@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom tree</title>
+</head>
+<body>
+<h1 id="intro">My first page</h1>
+<p id="demo">hello!</p>
+<script>
+    var myText=document.getElementById("intro").childNodes[0].nodeValue;
+    document.getElementById("demo").innerHTML=myText;
+</script>
+
+<p>Hello World!</p>
+<div>
+    <p>The DOM is very useful!</p>
+    <p>This example demonstrates the <b>document.body</b> property.</p>
+
+</div>
+<script>
+    alert(document.body.innerHTML);
+    //alert(document.documentElement.innerHTML);
+</script>
+
+<p>Example list:</p>
+<ul id="myList"><li id="item1">Coffe (first li)</li> <li id="item2">Tea (second li)</li></ul>
+<p>Click the button to get the HTML content of the next sibling of the first list item.</p>
+<button onclick="myFunction()">Try it</button>
+<p><strong>Note:</strong> Whitespace inside elements is considered as text, and text is considered as nodes.</p>
+<p>If you add whitespace between two li elements, the result will be "undefined".</p>
+<p id="demo2"></p>
+<script>
+    function myFunction() {
+        //var x=document.getElementById("item1").nextSibling.innerHTML;
+        var x=document.getElementById("item2").previousSibling.innerHTML;
+        //var x=document.getElementById("myList").firstChild.innerHTML;
+        //var x=document.getElementById("myList").lastChild.innerHTML;
+        document.getElementById("demo2").innerHTML=x;
+
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ierarhie dom 2</title>
+    <script type="text/javascript">
+        function WriteDiv() {
+            valText=document.form2.text2.value;
+            document.getElementById("div_id2").innerHTML=valText;
+        }
+    </script>
+</head>
+<body>
+<div id="div_id2">The place of the text from form</div>
+<form name="form2">
+    <textarea cols="30" rows="5" name="text2" id="text2"></textarea><br />
+    <input type="button" value="Show me" onclick="WriteDiv();" />
+</form>
+
+</body>
+</html>

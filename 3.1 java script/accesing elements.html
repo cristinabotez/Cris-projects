@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accesing Elements - Demo</title>
+    <script type="text/javascript">
+        document.write(document.head.childNodes[0].innerHTML);
+    </script>
+</head>
+<body>
+<div id="div_tag"><input type="text" value="test text" /><div><span id="test">test span</span></div></div>
+<script type="text/javascript">
+var el = document.getElementById("div_tag");
+alert (el.childNodes[0].value);
+//alert(el.childNodes[1].getElementsByTagNameNS('span').id);
+</script>
+
+</body>
+</html>

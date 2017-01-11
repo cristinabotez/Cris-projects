@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>structuri conditionale</title>
+</head>
+<body>
+
+
+
+
+
+<script type="text/javascript">
+    var number = prompt("enter number", 10);
+    document.write("Using for-loop: ");
+    for(i=0; i<number; i++)
+    {
+        document.write(i + " ");
+    }
+    document.write("<br/>");
+
+    document.write("Using while loop: ");
+    i = 0;
+    while(i < number)
+    {
+        document.write(i + " ");
+        i++
+    }
+    document.write("<br/>");
+    document.write("Using do.. while loop: ");
+    i = 0;
+    do
+    {
+        document.write(i + " ");
+        i++
+    }
+    while  (i < number);
+
+    document.write("<br/>");
+    document.write("Using for.. in (foreach) loop: ");
+    var langs = ["C#", "Java", "PHP"];
+    for (var langIndex in langs)
+    {
+        document.write(langs[langIndex] + " ");
+    }
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
