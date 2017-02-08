@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Self-Checkout</title>
+
+
+</head>
+<body>
+
+<form class="myForm" name="myForm">
+    Enter the price of item 1:
+    <input type="number" name="price1" required placeholder="Enter a price" onchange="myFunction()">
+    <br />
+    Enter the quantity of item 1:
+    <input type="number" name="quantity1" required placeholder="Enter a quantity" onchange="myFunction()">
+    <br />
+    <br />
+    Enter the price of item 2:
+    <input type="number" name="price2" required placeholder="Enter a price" onchange="myFunction()">
+    <br />
+    Enter the quantity of item 2:
+    <input type="number" name="quantity2" required placeholder="Enter a quantity" onchange="myFunction()">
+    <br />
+    <br />
+    Enter the price of item 3:
+    <input type="number" name="price3" required placeholder="Enter a price" onchange="myFunction()">
+    <br />
+    Enter the quantity of item 3:
+    <input type="number" name="quantity3" required placeholder="Enter a quantity" onchange="myFunction()">
+    <br />
+    <br />
+    <button type="button" onclick="myFunction()">Calculate</button>
+</form>
+
+<p id="test"></p>
+
+<script type="text/javascript">
+    function myFunction() {
+        var getprice1 = document.myForm.price1.value;
+        var getquantity1 = document.myForm.quantity1.value;
+        var getprice2 = document.myForm.price2.value;
+        var getquantity2 = document.myForm.quantity2.value;
+        var getprice3 = document.myForm.price3.value;
+        var getquantity3 = document.myForm.quantity3.value;
+
+        var firstprice = parseInt(getprice1);
+        var secondprice = parseInt(getprice2);
+        var thirdprice = parseInt(getprice3);
+
+        var firstquantity = parseInt(getquantity1);
+        var secondquantity = parseInt(getquantity2);
+        var thirdquantity = parseInt(getquantity3);
+
+        var subtotal = firstprice * firstquantity + secondprice * secondquantity + thirdprice * thirdquantity;
+        var tax = (subtotal * 5.5)/100;
+        var total = subtotal + tax;
+
+
+        if (isNaN(firstprice) || isNaN(secondprice) || isNaN(thirdprice) || isNaN(firstquantity) || isNaN(secondquantity) || isNaN(thirdquantity) || firstprice < 0 || secondprice < 0 || thirdprice < 0 || firstquantity < 0 || secondquantity < 0 || thirdquantity < 0){
+            document.getElementById('test').innerHTML="Wrong input, please try again.";
+        }
+        else {
+            document.getElementById('test').innerHTML = "Subtotal: $" + subtotal.toFixed(2) + "<br/>"
+            + "Tax: $" + tax.toFixed(2) + "<br/>"
+            + "Total: $" + total.toFixed(2);
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paint Calculator</title>
+
+
+</head>
+<body>
+
+<form class="myForm" name="myForm">
+
+    <input type="number" name="lenght" required placeholder="Enter lenght in feet" onchange="myFunction()">
+    <br />
+    <br />
+    <input type="number" name="width" required placeholder="Enter width in feet" onchange="myFunction()">
+    <br />
+    <br />
+    <button type="button" onclick="myFunction()">Calculate</button>
+</form>
+
+<p id="test"></p>
+
+<script type="text/javascript">
+    function myFunction() {
+        var getlenght = document.myForm.lenght.value;
+        var getwidth = document.myForm.width.value;
+
+        var firstInput = parseInt(getlenght);
+        var secondInput = parseInt(getwidth);
+
+        var squarefeet = firstInput * secondInput;
+        var noOfGallons = squarefeet / 350;
+
+
+        if (isNaN(firstInput) || isNaN(secondInput) || firstInput <= 0 || secondInput <= 0){
+            document.getElementById('test').innerHTML="Wrong input, please try again.";
+        }
+        else {
+            document.getElementById('test').innerHTML = "You will need to purchase " + Math.ceil(noOfGallons) + " gallons of paint to cover " + squarefeet + " square feet."
+        }
+    }
+</script>
+
+</body>
+</html>
