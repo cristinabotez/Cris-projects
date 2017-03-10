@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form id="firstform" name="myForm" method="post">
+    Enter a number:
+    <input id="first" type="number" name="first_number" required><br />
+    Enter a number:
+    <input id="second" type="number" name="second_number" required><br />
+    Enter a number:
+    <input id="third" type="number" name="third_number" required><br />
+    Enter a number:
+    <input id="fourth" type="number" name="fourth_number" required><br />
+    Enter a number:
+    <input id="fifth" type="number" name="fifth_number" required><br />
+
+    <button type="button" name="Calculate" onclick="calculateNumb()">Calculate</button>
+    <p id="text"></p>
+
+</form>
+
+<script>
+    function calculateNumb() {
+        var num1 = document.getElementById('first').value;
+        var num2 = document.getElementById('second').value;
+        var num3 = document.getElementById('third').value;
+        var num4 = document.getElementById('fourth').value;
+        var num5 = document.getElementById('fifth').value;
+        var num1int = parseInt(num1);
+        var num2int = parseInt(num2);
+        var num3int = parseInt(num3);
+        var num4int = parseInt(num4);
+        var num5int = parseInt(num5);
+        var x = num1int + num2int + num3int + num4int + num5int + ".";
+        document.getElementById('text').innerHTML="The total is " + x;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+        var nume = ["John Smith", "Jackie Jackson", "Chris Jones", "Amanda Cullen", "Jeremy Goodwin"];
+        var verif = 0;
+        document.write("There are "+nume.length+"employees:"+"<br>");
+        for (var i=0; i<nume.length; i++)
+        document.write(nume[i]+"<br>");
+        document.write("<br>" + "Enter an employee name to remove: " + "<br>");
+
+        function myFunction() {
+            var name = document.getElementById("myText").value;
+
+            for (var i=nume.length; i>=0; i--){
+                if(nume[i]==name){nume.splice(i, 1);
+                verif=1;
+                }
+            }
+
+            if(verif ==0) document.getElementById("demo").innerHTML="The name does not exist!";
+
+            else {
+                document.write("There are " + (nume.length)+" employees:" + "<br><br>");
+
+                for (var i=0; i<nume.length; i++)
+                    document.write(nume[i]+"<br>");
+            }
+        }
+    </script>
+</head>
+<body>
+
+<input type="text" id="myText">
+<button onclick="myFunction()">Enter</button>
+<p id="demo"></p>
+
+</body>
+</html>

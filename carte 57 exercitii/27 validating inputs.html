@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validating Inputs</title>
+</head>
+<body>
+
+<form name="myform">
+    First Name:
+    <input type="text" id="fname" placeholder="Enter First name">filled in at least two characters long<br/>
+    Last Name:
+    <input type="text" id="lname" placeholder="Enter Last name">filled in at least two characters long<br/>
+    Employee ID:
+    <input type="text" id="emplid" placeholder="Enter ID">in the format AA-1234<br/>
+    zip CODEe:
+    <input type="text" id="zipcode" placeholder="Enter zip code"/>must be a number<br/>
+    <button type="button" name="button" onclick="myFunction()">Check</button>
+</form>
+
+<div id="result"></div>
+
+<script type="text/javascript">
+
+    function readInput(input_id) {
+        return document.getElementById(input_id).value;
+
+    }
+
+    function isLetter(char) {
+        return 'abcdefghizklmnopqrstuvwxyz'.indexOf(char.toLowerCase()) >=0;
+
+    }
+
+    function isDigit(char) {
+        return '0123456789'.indexOf(char) >=0;
+    }
+
+    function validFunction(fname, lname, id, zip) {
+        if(fname.length <2) {
+            document.getElementById('result').innerHTML = 'First name invalid!'; //se opreste executia scriptului
+            return false;
+        }
+
+        if(lname.length <2) {
+            document.getElementById('result').innerHTML = 'Last name invalid!'; //se opreste executia scriptului
+            return false;
+        }
+
+        if(id.length == 7) {
+            if( isLetter(id[0]) && isLetter(id[1]) && id[2] == '-' && isDigit(id[3]) && isDigit(id[4]) && isDigit(id[5]) && isDigit(id[6])) {
+
+            }
+            else {
+                document.getElementById('result').innerHTML = 'ID error';
+                return false;
+            }
+        }
+        else {
+            document.getElementById('result').innerHTML='ID error';
+            return false;
+        }
+
+        if (zip.length <=3){
+            document.getElementById('result').innerHTML = "Zip code error";
+            return false;
+
+        } else {
+            for (var i=0; i< zip.lenght; ++i) {
+                if (!isDigit(zip[i])){
+                    document.getElementById("result").innerHTML = 'Zip code error';
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    function  myFunction() {
+        var fname = readInput('fname');
+        var lname = readInput('lname');
+        var id = readInput('emplid');
+        var zipcode = readInput('zipcode');
+        var isvalid = validFunction(fname, lname, id, zipcode);
+        if (!isvalid) {
+            return;
+        }
+        document.getElementById('result').innerHTML = 'First name is ' + fname + '<br />Last name is ' + lname + '<br />ZIP code is ' + zipcode + '<br />Employee ID is ' + id + '<br />'
+                + 'There were no errors found.';
+    }
+</script>
+
+
+
+</body>
+</html>

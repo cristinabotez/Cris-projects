@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Math_Chalenges</title>
+
+
+</head>
+<body>
+
+<form id="firstform" name="myForm" method="post">
+
+    What is the first number?
+    <input id="first" type="number" name="first_number" onkeypress="startTimer()" placeholder="10" required><br />
+
+    What is the second number?
+    <input id="second" type="number" name="second_number" onkeypress="startTimer()" placeholder="5" required><br />
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+
+</form>
+
+<script type="text/javascript">
+
+    function myfunction() {
+        var x = document.getElementById('first').value;
+        var y = document.getElementById('second').value;
+
+        var xint = parseInt(x);
+        var yint = parseInt(y);
+
+        if (xint<0 || yint<0) {
+                document.write("Please enter a positive number")
+        }
+
+
+        var a = xint + yint;
+        document.getElementById('demo1').innerHTML=  x + " + " + y + " = " + a;
+
+        var b = xint - yint;
+        document.getElementById('demo2').innerHTML=  x + " - " + y + " = " + b;
+
+        var c = xint * yint;
+        document.getElementById('demo3').innerHTML=  x + " * " + y + " = " + c;
+
+        var d = xint / yint;
+        document.getElementById('demo4').innerHTML=  x + " / " + y + " = " + d;
+    }
+
+    function startTimer() {
+        setTimeout('myfunction()',1000);
+    }
+
+</script>
+
+</body>
+</html>

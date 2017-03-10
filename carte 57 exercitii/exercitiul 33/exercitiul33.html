@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Magic 8 Ball</title>
+</head>
+<body>
+
+<!--Example Output
+What's your question? Will I be rich and famous?
+Ask again later.
+
+ Constraint
+• The value should be chosen randomly using a pseudo
+random number generator. Store the possible choices
+in a list and select one at random.
+
+
+Challenges
+• Implement this as a GUI application.
+• If available, use native device libraries to allow you to
+“shake” the 8 ball.
+report
+ -->
+
+What's your question?
+<input type="text" placeholder="enter a question">
+<button type="button" id="answerButton">Answer me</button>
+<p id="answerContainer"></p>
+
+<script>
+    var answers = ['Yes.',
+                    'No.',
+            'Maybe.',
+            'Ask again later.'];
+
+    document.getElementById('answerButton').onclick = function answerMe() {
+        var answer = answers[Math.floor(Math.random() * answers.length)];
+        document.getElementById('answerContainer').innerHTML=answer;
+    }
+</script>
+
+
+</body>
+</html>

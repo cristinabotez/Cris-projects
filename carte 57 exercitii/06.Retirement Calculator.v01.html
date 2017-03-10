@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Retirement Calculator</title>
+</head>
+<body>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<script type="text/javascript">
+    var x = prompt ("What is your current age", "25");
+    var y = prompt ("At what age would you like to retire?", "65");
+    var z = parseInt(y) - parseInt(x);
+    var a = ("You have ").concat(z, " years left until you can retire.");
+    document.getElementById("demo1").innerHTML = a;
+
+    var b = new Date();
+    var n = b.getFullYear();
+
+    var c = n + z;
+    var d = ("It's ").concat(n, ", so you can retire in ", c, ".");
+    document.getElementById("demo2").innerHTML = d;
+
+</script>
+
+</body>
+</html>

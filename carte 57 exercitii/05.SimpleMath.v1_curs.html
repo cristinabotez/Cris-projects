@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Math</title>
+
+
+</head>
+<body>
+
+<form class="myForm" name="myForm">
+    <input type="text" name="firstNumber" required placeholder="Enter first number" onchange="myFunction()">
+    <input type="text" name="secondNumber" required placeholder="Enter second number" onchange="myFunction()">
+    <button type="button" onclick="myFunction()">Calculate</button>
+</form>
+
+<p id="test"></p>
+
+<script type="text/javascript">
+    function myFunction() {
+        var getFirstNumber = document.myForm.firstNumber.value;
+        var getSecondNumber = document.myForm.secondNumber.value;
+        var firstInput = parseInt(getFirstNumber);
+        var secondInput = parseInt(getSecondNumber);
+        var addFunct = firstInput + secondInput;
+        var minusFunct = firstInput - secondInput;
+        var multiplyFunct = firstInput * secondInput;
+        var divideFunct = firstInput / secondInput;
+
+        if (isNaN(firstInput) || isNaN(secondInput) || firstInput < 0 || secondInput < 0){
+            document.getElementById('test').innerHTML="Wrong input, please try again";
+        }
+        else {
+            document.getElementById('test').innerHTML = firstInput + " + " + secondInput + " = " + addFunct + "<br/>"
+            + firstInput + " - " + secondInput + " = " + minusFunct + "<br/>"
+            + firstInput + " * " + secondInput + " = " + multiplyFunct + "<br/>"
+            + firstInput + " / " + secondInput + " = " + divideFunct;
+
+        }
+    }
+</script>
+
+</body>
+</html>

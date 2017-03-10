@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript"></script>
+</head>
+<body>
+
+<!--
+Example output
+Enter 2 strings and I'll tell you if they are anagrams:
+Enter the first string: note
+Enter the second string: tone
+"note" and "tone" are anagrams.
+
+Constraints
+• Implement the program using a function called isAnagram,
+which takes in two words as its arguments and
+returns true or false. Invoke this function from your main
+program.
+• Check that both words are the same length.
+
+-->
+
+<form id="firstform" name="myForm" method="post">
+    Enter 2 strings and I'll tell you if they are anagrams:<br />
+    Enter the first string:
+    <input id="first" type="text" name="first_string" required><br />
+    Enter the second string:
+    <input id="second" type="text" name="second_string" required><br />
+    <button type="button" name="Compare" onclick="compareString()">Compare</button>
+
+    <p id="text"></p>
+    <p id="test"></p>
+
+</form>
+
+
+<script>
+    function compareString() {
+        var str1 = document.getElementById('first').value;
+        var str2 = document.getElementById('second').value;
+
+        //var x =str1.toLowerCase().split('').sort().join('').trim();
+        //var y =str2.toLowerCase().split('').sort().join('').trim();
+
+        //document.getElementById('test').innerHTML=str1.toLowerCase().split('').sort().join('').trim();
+        //split - spliteaza prin virgula caracterele si il transforma intr-un array
+        //sort - pune in ordine alfabetica caracterele
+        //join - pune in ordinea initiala caracterele - de fapt il transforma inapoi in string
+        //trim elimina spatiile dintre caractere
+
+
+    var regularize = function (str) {
+        return str.toLowerCase().split('').sort().join('').trim();
+    }
+
+        var x = regularize(str1);
+        var y = regularize(str2);
+
+        if (x === y) {
+            this.isAnagram = true;
+            document.getElementById('text').innerHTML = '"' + str1 + '"' + ' and ' + '"' + str2 + '"' + " are anagrams.";
+        } else {
+            this.isAnagram = false;
+            document.getElementById('text').innerHTML = '"' + str1 + '"' + ' and ' + '"' + str2 + '"' + " are not anagrams."
+        }
+    }
+
+</script>
+
+</body>
+</html>

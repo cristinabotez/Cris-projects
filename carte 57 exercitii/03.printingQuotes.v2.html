@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Printing Quotes</title>
+
+
+</head>
+<body>
+
+<p id="demo"></p>
+
+<script type="text/javascript">
+    var x = prompt ("What is the quote?", "These aren't the droids you're looking for.");
+    var y = prompt ("Who said it?", "Obi-Wan Kenobi");
+    var z = y.concat(" says, ", '"', x, '"');
+    document.getElementById("demo").innerHTML=z;
+</script>
+
+</body>
+</html>

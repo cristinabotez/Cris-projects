@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Password generator</h3>
+<button onclick="Password()">Generate</button>
+<p id="output">
+
+</p>
+
+<script>
+    function Password() {
+        var minNum = prompt("Minimum lenght: ", "8");
+        var numNum = prompt("How many numbers? ", "3");
+        var specNum = prompt("How many special characters?", "3");
+        var charAlph = ["a", "b", "c", "d", "e", "f",  "g", "h", "k"];
+        var chNumb = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+        var chSpecia = ["&#33;", "&#35;", "&#36;", "\*", "&#40;", "&#41;", "?"];
+        var password="";
+        var diff= minNum-specNum-numNum;
+        var i;
+        for (i=0; i<specNum; i++){
+            var rand=Math.floor((Math.random() * 9) + 1);
+            password=password+chNumb[rand];
+        }
+        for (i=0; i<specNum; i++){
+            var rand=Math.floor((Math.random() * 6) + 1);
+            password=password+chSpecia[rand];
+        }
+        for (i=0; i<diff; i++){
+            var rand=Math.floor((Math.random() * 10) + 1);
+            password=password+charAlph[rand];
+        }
+        document.getElementById("output").innerHTML = password;
+    }
+</script>
+
+</body>
+</html>

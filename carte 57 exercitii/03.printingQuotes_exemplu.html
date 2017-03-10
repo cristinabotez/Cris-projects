@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Obi van KINOBI</title>
+</head>
+<body>
+
+<select id="autor">
+    <option>Autor 1</option>
+    <option>Autor 2</option>
+    <option>Autor 3</option>
+    <option>Autor 4</option>
+</select>
+<select id="quote">
+    <option>Ce Spune 1</option>
+    <option>Ce Spune 2</option>
+    <option>Ce Spune 3</option>
+    <option>Ce Spune 4</option>
+</select>
+<button onclick="myFunc()">Click me</button>
+<p id="demo"></p>
+
+<script>
+    var authors =["Vlad","Ion","Victor","Vasile"];
+    var quotes = ["\"Noapte buna\"","\"Buna dimineata\"","\"Buna seara\"","\"Buna ziua\""];
+    function myFunc() {
+        document.getElementById("demo").innerHTML=  authors[document.getElementById("autor").selectedIndex]+" a zis "+ quotes[document.getElementById("quote").selectedIndex];
+
+    }
+
+    /*
+     for(i=0;i<quotes.length;i++)
+     {
+     document.write(authors[i]+" says, " +"\"" +quotes[i] +"\""+"</br>")
+     }*/
+</script>
+
+</body>
+</html>

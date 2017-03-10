@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tax Calculator</title>
+    <script type="text/javascript">
+        function calculateTax() {
+            var x = parseFloat(document.getElementById('order-am').value);
+            var y = document.getElementById('state').value;
+            var tax = 0.55;
+            var tot = x + tax;
+            var st = y.slice(0, 2);
+            var stat = st.toUpperCase();
+
+            if (stat == "WI") {
+                document.getElementById('text').innerHTML =
+                    "What is the order amount?" + x + "<br />" +
+                    "What is the state? " + stat + "<br />" +
+                    "The subtotal is $" + x.toFixed(2) + "." + "<br />" +
+                    "The tax is $" + tax  + "." + "<br />" +
+                    "The total is $" + tot + ".";
+            }
+
+            if (stat=="MN") {
+                document.getElementById('text').innerHTML =
+                    "What is the order amount? " + x + "<br />" +
+                    "What
+                is
+                the
+                state ? " + stat + " < br / > " + "The
+                total
+                is
+                $
+                " + x.toFixed(2);
+            }
+        }
+    </script>
+</head>
+<body>
+<!-- actual rezults:
+#Writing the algorithm in pseudocode
+    Tax Calculator
+    Prompt for order amount
+    prompt for state
+    if not WI
+    Display subtotal-->
+<form id="firstform" name="myForm" method="post">
+    What is the order amount?
+    <input id="order-am" type="number" name="order_amount" required>
+    <br />
+    What is the state?
+    <input id="state" type="text" name="state" required>
+    <button type="button" name="Calculate" onclick="calculateTax()">Calculate</button>
+    <p id="text"></p>
+</form>
+
+</body>
+</html>

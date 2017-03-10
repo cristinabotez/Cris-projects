@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Determining Compound Interest</title>
+
+
+</head>
+<body>
+
+<form class="myForm" name="myForm">
+    What is the principal amount?
+    <input type="number" name="principal" required placeholder="Enter a value" onchange="myFunction()">
+    <br />
+    <br />
+    What is the rate?
+    <input type="number" name="interest" required placeholder="Enter a value" onchange="myFunction()">
+    <br />
+    <br />
+    What is the number of years?
+    <input type="number" name="years" required placeholder="Enter a number" onchange="myFunction()">
+    <br />
+    <br />
+    What is the number of times the interest is compounded per year?
+    <input type="number" name="compounded" required placeholder="Enter a number" onchange="myFunction()">
+    <br />
+    <br />
+    <button type="button" onclick="myFunction()">Calculate</button>
+</form>
+
+<p id="test"></p>
+
+<script type="text/javascript">
+    function myFunction() {
+        var getprincipal = document.myForm.principal.value;
+        var getinterest = document.myForm.interest.value;
+        var getyears = document.myForm.years.value;
+        var getcompounded = document.myForm.compounded.value;
+
+        var firstInput = parseFloat(getprincipal);
+        var secondInput = parseFloat(getinterest);
+        var thirdInput = parseInt(getyears);
+        var fourthInput = parseInt(getcompounded);
+
+        var finalamount = firstInput * Math.pow((1 + (secondInput / 100 ) /fourthInput), fourthInput * thirdInput) ;
+
+        if (isNaN(firstInput) || isNaN(secondInput) || isNaN(thirdInput) || isNaN(fourthInput) || firstInput <= 0 || secondInput <= 0 || thirdInput <= 0 || fourthInput <= 0){
+            document.getElementById('test').innerHTML = "Wrong input, please try again.";
+        }
+        else {
+            document.getElementById('test').innerHTML = "$" + firstInput + " invested at " + secondInput.toFixed(4) + "% for 6 years compounded " + fourthInput + " times per year is $" + finalamount.toFixed(2) + ".";
+        }
+    }
+</script>
+
+</body>
+</html>

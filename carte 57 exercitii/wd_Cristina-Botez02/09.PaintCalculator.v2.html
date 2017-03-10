@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paint Calculator</title>
+
+
+</head>
+<body>
+
+<select onchange="myFunction()" id="select">
+    <option>Select shape</option>
+    <option>Square</option>
+    <option>Circle</option>
+    <option>L-shape</option>
+</select>
+
+<input id="lungime" type="number" value="10"/>
+<input id="latime" type="number" value="36"/>
+<input id="lungime1" type="number" value="10"/>
+<input id="latime1" type="number" value="36"/>
+<br />
+<button onclick="myFunction2()">Calculate</button>
+<br />
+<textarea id="result" rows="5" cols="100"></textarea>
+
+<script type="text/javascript">
+    function myFunction2() {
+        var selection = document.getElementById("select").selectedIndex;
+        var area = 0;
+        switch (selection){
+            case 0:
+                break;
+            case 1:
+                var lung = document.getElementById("lungime").value;
+                var lat = document.getElementById("latime").value;
+                document.getElementById("latime1").style.display = "none";
+                document.getElementById("lungime1").style.display = "none";
+                area = lung*lat;
+                break;
+
+            case 2:
+                document.getElementById("latime").style.display = "none";
+                document.getElementById("latime1").style.display = "none";
+                document.getElementById("lungime1").style.display = "none";
+                var lung = document.getElementById("lungime").value;
+                area = Math.ceil(Math.PI*lung*lung);
+                break;
+
+            case 3:
+                document.getElementById("lungime").style.display="inline-block";
+                document.getElementById("latime").style.display="inline-block";
+                document.getElementById("latime1").style.display="inline-block";
+                document.getElementById("lungime1").style.display="inline-block";
+                document.getElementById("latimel").innerHTML="Lungime";
+                document.getElementById("lungimel").innerHTML="Latime";
+                document.getElementById("latimel1").innerHTML="Lungime1";
+                document.getElementById("lungimel1").innerHTML="Latime1";
+                lung = document.getElementById("lungime").value;
+                lat = document.getElementById("latime").value;
+                lung1 = document.getElementById("lungime1").value;
+                lat1 = document.getElementById("latime1").value;
+                area =lat*lung-lat1*lung1;
+                break;
+        }
+        return area;
+    }
+    function myFunction() {
+
+        var galons=Math.ceil(myFunction2()/350);
+
+        document.getElementById("result").innerHTML="You will need to purchase "+galons+" gallons of paint to cover "+myFunction2()+" square feet";
+
+    }
+</script>
+
+</body>
+</html>

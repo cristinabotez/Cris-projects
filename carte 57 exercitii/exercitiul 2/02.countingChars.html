@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Countin Chars</title>
+    <style type="text/css">
+        input#count {
+            border: 0;
+            font-size: 13px;
+        }
+    </style>
+    <script type="text/javascript">
+        var input_string;
+        function countChar() {
+            input_string = document.getElementById('count').value;
+            //input_string = input_string.trim();
+            res = input_string.length;
+            console.log(input_string + " has " + input_string.length + " characters.");
+            if (res===0) {
+                document.getElementById('res').innerHTML = "Please enter something.";
+            }
+            else {
+                document.getElementById('counter').value = res;
+            }
+        }
+        function startTimer() {
+            setInterval('countChar()', 1000);
+            // countChar();
+        }
+    </script>
+</head>
+<body>
+<!--Create a program that prompts for an input string and displays
+output that shows the input string and the number of
+characters the string contains.-->
+
+<form id="formCount" method="POST">
+    <label for="count">What is your input string</label>
+    <input type="text" id="count" name="count" onkeypress="startTimer()"/>
+    <button type="button" name="Calculate">Count on key press</button>
+    <input type="text" id="counter" readonly="readonly"/>
+</form>
+<p id="result"></p>
+</body>
+</html>

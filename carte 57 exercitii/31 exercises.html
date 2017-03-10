@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>31 exercises</title>
+</head>
+<body>
+<form name="myform">
+    Resting pulse
+    <input type="number" name="pulse" placeholder="enter resting pulse" min="0" onchange="calculateInput()"><br />
+    Age:
+    <input type="number" name="age" placeholder="enter your age" min="0" onchange="calculateInput()"><br />
+    <button type="button" onclick="calculateInput()">Calculate</button>
+</form>
+<div id="result"></div>
+
+<script type="text/javascript">
+    function readInput(input_id) {
+        return parseInt(document.myform[input_id].value);
+    }
+
+    function calculateInput() {
+        document.getElementById('result').innerHTML = ' ';
+        var rating = readInput('pulse');
+        var age = readInput('age');
+        for (var i = 55; i<=95; i+=5) {
+
+            var calculate = (((220-age) - rating)*(i/100)) + rating;
+            document.getElementById('result').innerHTML += i + '%' + ' | ' + calculate + ' bpm' + '<br/>';
+        }
+
+    }
+
+</script>
+
+</body>
+</html>

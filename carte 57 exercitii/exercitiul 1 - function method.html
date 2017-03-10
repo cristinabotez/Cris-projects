@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Write an algorithm that returns the smallest element in aan array-->
+
+    <script type="text/javascript">
+        var i,n;
+        var  min=0;
+
+//dimensiunea tabloului
+        n=parseInt(prompt("Enter array size"));
+        var a=new Array(n);
+
+//prompt for values
+        for(i=0; i<n;i++)
+        {
+            a[i]=parseInt(prompt("Enter numbers"));
+        }
+//finding minimum
+        min=a[0];
+        for (i=0;i<n;i++){
+            if(min>a[i])
+                min=a[i];
+        }
+
+        document.write("minimum number is = "+min+"<br>");
+    </script>
+</head>
+<body>
+
+</body>
+</html>
