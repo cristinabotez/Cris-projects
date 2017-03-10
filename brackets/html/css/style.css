@@ -1,0 +1,10 @@
+#password, #username {
+    display:block;
+    margin-top: 4px;
+    padding-left: 10px;
+    width: 30%;
+}
+
+button {
+    margin-top: 4vw;
+}
