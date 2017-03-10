@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom-elements</title>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body onmouseup="mouseUp()" onmousedown="mouseDown()">
+<div>
+    <div id="toSelect" onclick="mouseDown" onmouseup="mouseUp()">
+
+    </div>
+
+    <div id="idSelect"></div>
+</div>
+
+<script type="text/javascript">
+    isMouseUp=false;
+    function mouseDown() {
+        isMouseUp = true;
+    }
+
+    function mouseUp() {
+        isMouseUp = false;
+    }
+
+    function mouseMove() {
+        if (isMouseUp)
+
+    }
+</script>
+
+</body>
+</html>

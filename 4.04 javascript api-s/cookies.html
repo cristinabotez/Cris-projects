@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cookies</title>
+</head>
+<body>
+
+<input type="text" id="tb-cookie-name" />
+<input type="text" id="tb-cookie-value" />
+<a href="#" onclick="saveCookie()">create cookie</a>
+<a href="#" onclick="readCookie()">read cookie</a>
+<script type="text/javascript">
+    function readCookie() {
+        var name = document.getElementById("tb-cookie-name").value;
+        console.log(cookies.read(name));
+
+    }
+
+    function saveCookie() {
+
+        var name = document.getElementById("tb-cookie-name").value;
+        var value = document.getElementById("tb-cookie-value").value;
+        cookies.create(name, value);
+
+    }
+</script>
+
+
+</body>
+</html>

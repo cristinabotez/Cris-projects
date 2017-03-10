@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1</title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"/>
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+
+    <link rel="stylesheet" href="style.css"/>
+
+    <script src="script.js"></script>
+</head>
+<body>
+<!-- When opening a modal for a color and you clock YES change the background color of 'body' to the selected color -->
+
+<div class="resizable-content">
+    <h1>Javascript Libraries</h1>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-colorname="red">Open modal for red</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-colorname="blue">Open modal for blue</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-colorname="limegreen">Open modal for green</button>
+
+    <div class="modal fade" id="exampleModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
+                    <h4 class="modal-title" id="exampleModalLabel"><span class="modal-message">New Message</span>
+                        <span id="color-name"></span>
+                    </h4>
+                    <p></p>
+                    <button type="button" class=""></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
