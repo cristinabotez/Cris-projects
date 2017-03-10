@@ -1,0 +1,15 @@
+.row {
+    height: 50px;
+    border: 1px solid red;
+    margin-top: 2px;
+}
+
+.firstDiv, .secondDiv {
+    margin-left: 70px;
+    margin-top: 20px;
+
+}
+
+.secondDiv {
+    display: none;
+}
