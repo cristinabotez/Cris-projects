@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>change style</title>
+</head>
+
+<link id="pagestyle" rel="stylesheet" type="text/css" href="default.css">
+
+<script type="text/javascript">
+    function swapStyleSheet(sheet) {
+        document.getElementById("pagestyle").setAttribute('href', sheet);
+    }
+
+
+</script>
+
+<body>
+<div>
+    <h2>Change stylesheet</h2>
+    <button onclick="swapStyleSheet('yellow.css')">Yellow</button>
+
+    <button onclick="swapStyleSheet('blue.css')">Blue</button>
+
+    <button onclick="swapStyleSheet('default.css')">Default</button>
+</div>
+
+<!-- de modificat folosind liste-->
+
+</body>
+</html>
