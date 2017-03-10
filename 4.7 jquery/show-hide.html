@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>show-hide</title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+
+<button id="hideButton">hide</button>
+<button id="showButton">show</button>
+<div id="something" style="width: 150px; margin: 10px; background: red">Something to hide</div>
+
+<script type="text/javascript">
+    $("#showButton").hide();
+
+    $("#hideButton").click(function (){
+        $("#something").hide();
+        $("#hideButton").hide();
+        $("#showButton").show();
+    });
+
+$("#showButton").click(function () {
+    $("#something").show();
+    $("#hideButton").show();
+    $("#showButton").hide();
+});
+</script>
+
+
+
+</body>
+</html>
